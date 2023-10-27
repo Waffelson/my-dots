@@ -1,0 +1,390 @@
+
+font pango: JetBrains Mono Regular 12
+
+
+set $mod Mod4
+
+
+workspace_layout default
+
+
+new_window pixel 4
+
+
+gaps inner 6
+gaps outer 3
+
+
+floating_modifier $mod
+
+
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+
+bindsym $mod+1    workspace  1
+bindsym $mod+2    workspace  2
+bindsym $mod+3    workspace  3
+bindsym $mod+4    workspace  4
+bindsym $mod+5    workspace  5
+bindsym $mod+6    workspace  6
+bindsym $mod+7    workspace  7
+bindsym $mod+8    workspace  8
+bindsym $mod+9    workspace  9
+bindsym $mod+0    workspace  10
+
+# switch to workspace with numpad keys
+bindcode $mod+87 workspace 1
+bindcode $mod+88 workspace 2
+bindcode $mod+89 workspace 3
+bindcode $mod+83 workspace 4
+bindcode $mod+84 workspace 5
+bindcode $mod+85 workspace 6
+bindcode $mod+79 workspace 7
+bindcode $mod+80 workspace 8
+bindcode $mod+81 workspace 9
+bindcode $mod+90 workspace 10
+
+# switch to workspace with numlock numpad keys
+bindcode $mod+Mod2+87 workspace 1
+bindcode $mod+Mod2+88 workspace 2
+bindcode $mod+Mod2+89 workspace 3
+bindcode $mod+Mod2+83 workspace 4
+bindcode $mod+Mod2+84 workspace 5
+bindcode $mod+Mod2+85 workspace 6
+bindcode $mod+Mod2+79 workspace 7
+bindcode $mod+Mod2+80 workspace 8
+bindcode $mod+Mod2+81 workspace 9
+bindcode $mod+Mod2+90 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1    move container to workspace  1
+bindsym $mod+Shift+2    move container to workspace  2
+bindsym $mod+Shift+3    move container to workspace  3
+bindsym $mod+Shift+4    move container to workspace  4
+bindsym $mod+Shift+5    move container to workspace  5
+bindsym $mod+Shift+6    move container to workspace  6
+bindsym $mod+Shift+7    move container to workspace  7
+bindsym $mod+Shift+8    move container to workspace  8
+bindsym $mod+Shift+9    move container to workspace  9
+bindsym $mod+Shift+0    move container to workspace  10
+
+
+
+
+bindsym $mod+Return exec alacritty
+
+# kill focused window
+bindsym $mod+q kill
+
+# exit-menu
+bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
+
+# Lock the system
+# lock with a picture:
+#bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
+# lock by blurring the screen:
+bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to update i3)
+bindsym $mod+Shift+r restart
+
+# keybinding in fancy rofi (automated):
+bindsym F1 exec ~/.config/i3/scripts/keyhint-2
+# alternative
+# keybinding list in editor:
+# bindsym $mod+F1 exec xed ~/.config/i3/keybindings
+
+# Backlight control
+#bindsym XF86MonBrightnessUp exec xbacklight +10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+#bindsym XF86MonBrightnessDown exec xbacklight -10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+# Backlight setting using dunst osc
+#bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
+#bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+#bindsym $mod+b focus up
+#bindsym $mod+o focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+b move up
+bindsym $mod+Shift+o move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+s layout stacking
+#bindsym $mod+g layout tabbed
+#bindsym $mod+e layout toggle split
+bindsym $mod+e exec thunar
+
+bindsym $mod+r exec --no-startup-id $HOME/.config/i3/i3-swap-master.py
+
+exec_always --no-startup-id $HOME/.config/i3/i3-master-layout.py
+
+# toggle tiling / floating
+bindsym $mod+space floating toggle
+
+# change focus between tiling / floating windows
+#bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# open new empty workspace
+bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
+
+# Multimedia Keys
+
+# volume
+# use meta keys without showing osc
+#bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+#bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+# use meta keys showing osc using dunst
+#bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_up
+#bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_down
+
+# gradular volume control
+#bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
+#bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+
+# mute
+#bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
+# use meta keys showing osc using dunst
+#bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_mute
+
+# mic mute toggle
+#bindsym XF86AudioMicMute exec amixer sset Capture toggle
+
+# audio control
+#bindsym XF86AudioPlay exec playerctl play
+#bindsym XF86AudioPause exec playerctl pause
+#bindsym XF86AudioNext exec playerctl next
+#bindsym XF86AudioPrev exec playerctl previous
+
+# Redirect sound to headphones
+#bindsym $mod+p exec /usr/local/bin/switch-audio-port
+
+bindsym $mod+c exec alacritty -e cava
+
+bindsym $mod+b exec alacritty -e btop
+
+## App shortcuts
+bindsym $mod+w exec /usr/bin/firefox
+bindsym $mod+n exec /usr/bin/thunar
+bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+
+# Power Profiles menu switcher (rofi)
+bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+
+##########################################
+# configuration for workspace behaviour: #
+##########################################
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+
+
+# use workspaces on different displays:
+# where you have to replace VGA-0/HDMI-0 with the names for your displays
+# you can get from xrandr command
+#workspace $ws1 output VGA-0
+#workspace $ws2 output VGA-0
+#workspace $ws3 output HDMI-0
+#workspace $ws4 output HDMI-0
+#workspace $ws5 output HDMI-0
+
+# bind program to workspace and focus to them on startup:
+
+
+
+
+##############
+# compositor #
+##############
+
+# transparency
+# uncomment one of them to be used
+# options could need changes, related to used GPU and drivers.
+# to find the right setting consult the archwiki or ask at the forum.
+#
+# xcompmgr: https://wiki.archlinux.org/title/Xcompmgr
+# manpage: https://man.archlinux.org/man/xcompmgr.1.en
+# install xcompmgr package to use it (yay -S xcompmgr)
+#exec --no-startup-id xcompmgr -C -n &
+# or an more specialized config like this:
+#exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
+#
+# or:
+#
+# picom: https://wiki.archlinux.org/title/Picom
+# manpage: https://man.archlinux.org/man/picom.1.en
+# The default configuration is available in /etc/xdg/picom.conf 
+# For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf
+# install picom package (yay -S picom)
+# start using default config 
+#exec_always --no-startup-id picom -b
+
+#exec_always --no-startup-id nitrogen
+
+exec_always --no-startup-id xfsettingsd
+
+exec_always --no-startup-id xset led
+
+
+#
+# for custom config:
+#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+
+#############################################
+# autostart applications/services on login: #
+#############################################
+
+#get auth work with polkit-gnome
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# dex execute .desktop files + apps using /etc/xdg/autostart.
+# when second to i3 a DE is installed or mixed usage of i3 + xfce4 or GNOME
+# in this cases better disable dex and use manual starting apps using xdg/autostart
+# if enabled you should comment welcome app.
+# https://github.com/jceb/dex
+#exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+exec --no-startup-id dex --autostart --environment i3
+
+# start welcome app
+#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
+
+# num lock activated
+#exec --no-startup-id numlockx on
+
+# configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
+#exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
+
+# start conky:
+#exec_always --no-startup-id conky
+
+# start a script to setup displays
+# uncomment the next line, use arandr to setup displays and save the file as monitor:
+exec --no-startup-id ~/.screenlayout/monitor.sh
+
+# set wallpaper
+# exec --no-startup-id sleep 2 && nitrogen --restore
+exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+
+# set powersavings for display:
+exec --no-startup-id xset s 480 dpms 600 600 600
+
+# disable power saving (for example if using xscreensaver)
+#exec --no-startup-id xset -dpms
+
+# use xautolock to use autosuspend rules for mobile devices
+# https://wiki.archlinux.org/title/Session_lock#xautolock
+#exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
+
+
+# xscreensaver
+# https://www.jwz.org/xscreensaver
+#exec --no-startup-id xscreensaver --no-splash
+
+# Desktop notifications
+# dunst config used ~/.config/dunst/dunstrc
+# set alternative config if needed:
+#exec --no-startup-id /usr/bin/dunst --config ~/.config/dunst/dunstrc
+# may yneed to run dbus-launch explicitly: 
+#exec --no-startup-id dbus-launch /usr/bin/dunst
+exec --no-startup-id /usr/bin/dunst
+# alternative if you installed aside with XFCE4:
+# exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+
+# autotiling script
+# https://github.com/nwg-piotr/autotiling
+# `yay -S autotiling ;) (it is in AUR)
+#exec_always --no-startup-id autotiling
+
+# Autostart apps as you like
+#exec --no-startup-id sleep 2 && xfce4-terminal
+#exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
+#exec --no-startup-id sleep 3 && thunar
+
+
+
+# set floating (nontiling) for apps needing it
+for_window [class="Yad" instance="yad"] floating enable
+for_window [class="Galculator" instance="galculator"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+
+# set floating (nontiling) for special apps
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+for_window [class="qt5ct" instance="qt5ct"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [class="Pamac-manager"] floating enable
+for_window [window_role="About"] floating enable
+
+# set border of floating window
+for_window [class="urxvt"] border pixel 1
+
+
+
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #8fbcbb #8fbcbb #ffffff #2e9ef4   #8fbcbb
+client.focused_inactive #3b4252 #3b4252 #ffffff #484e50   #3b4252
+client.unfocused        #3b4252 #222222 #888888 #292d2e   #3b4252
+client.urgent           #3b4252 #900000 #ffffff #900000   #8fbcbb
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+
+
+
+
+bar {
+	font pango: JetBrains Mono Regular 12
+	status_command i3blocks
+	position top
+}
+
+bindsym $mod+p exec picom -b
+
+bindsym $mod+o exec pkill picom
+
+bindsym $mod+d exec rofi -modi drun -show drun -show-icons
+
+
+bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym XF86AudioPlay exec playerctl play-pause 
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioMute exec playerctl mute
+		
+
