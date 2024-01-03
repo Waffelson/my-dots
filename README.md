@@ -2,7 +2,8 @@ Personal dots for arch
 
 Some configs are taken from others
 
-https://i.ibb.co/tB8SsSg/20240103-15h58m32s-grim.png
+![image](https://github.com/Waffelson/my-dots/assets/127903646/550ad532-b015-4cce-b455-113b043922a3)
+
 
 
 
