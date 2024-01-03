@@ -1,3 +1,8 @@
 Personal dots for arch 
-![Uploading image.png…]()
+
+Some configs are taken from others
+
+
+
+
 
