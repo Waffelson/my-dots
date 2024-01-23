@@ -4,6 +4,8 @@ Some configs are taken from others
 
 ![image](https://github.com/Waffelson/my-dots/assets/127903646/400227c1-22b5-4933-909e-c99d27406400)
 
+[Wallpaper](https://wallhaven.cc/w/5wj2d3) 
+
 
 # Themes
  
