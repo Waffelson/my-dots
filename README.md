@@ -8,8 +8,11 @@ Some configs are taken from others
  Themes
  
 GTK Theme Nordic[https://www.gnome-look.org/p/1267246/]
+
 Icons theme Nordzy-icons[https://github.com/alvatip/Nordzy-icon]
+
 Cursor theme Pautchouli[https://www.gnome-look.org/p/2077667]
+
 GTK/QT Font Ubuntu
 Terminal Font Ubuntu Mono
 
