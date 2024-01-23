@@ -2,7 +2,7 @@ Hyprland Rice for CachyOS (Arch Linux)
 
 Some configs are taken from others
 
-![image](https://github.com/Waffelson/my-dots/assets/127903646/4e6d804d-a002-4963-be82-e1064678715f)
+![image](https://github.com/Waffelson/my-dots/assets/127903646/400227c1-22b5-4933-909e-c99d27406400)
 
 
 # Themes
@@ -12,6 +12,7 @@ Some configs are taken from others
 - Cursor theme - [Pautchouli](https://www.gnome-look.org/p/2077667)
 - GTK/QT Font - Ubuntu
 - Terminal Font - Ubuntu Mono
+- Bar Font - JetBrainsMono
 
 # Apps 
 
