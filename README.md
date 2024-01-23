@@ -32,7 +32,7 @@ Some configs are taken from others
 - QT Theme managers - qt6ct + kvantum manager
 
 # Pacman packages
-`waybar fish starship foot thunar btop cava swayidle qt6ct mpv mousepad micro fuzzel dunst kvantum xarchiver`
+`waybar fish starship foot thunar btop cava swayidle qt6ct mpv mousepad micro fuzzel dunst kvantum xarchiver fastfetch`
 # AUR packages (Recommend use [Chaotic-aur](https://aur.chaotic.cx/))
 `hyprland-git cmatrix-git nwg-look qimgv waypaper-git swww`
 
