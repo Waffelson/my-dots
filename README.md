@@ -15,7 +15,8 @@ Some configs are taken from others
 
 # Apps 
 
-- Browser - Cachy Browser (Firefox fork) 
+- Browser - Cachy Browser (Firefox fork)
+- Second browser - Tor Browser
 - Terminal - Foot 
 - App launcher - Fuzzel 
 - Bar - Waybar 
