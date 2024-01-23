@@ -18,15 +18,15 @@ Terminal Font Ubuntu Mono
 
 Apps 
 
-Browser - Cachy Browser (Firefox fork)
-Terminal - Foot
-App launcher - Fuzzel
-Bar - Waybar
-File Manager - Thunar
-GUI Text eitor - Mousepad
-CLI Text editor - Micro
-Media player - mpv
-Wallpaper manager - Waypaper (swww backend)
+Browser - Cachy Browser (Firefox fork) 
+Terminal - Foot 
+App launcher - Fuzzel 
+Bar - Waybar 
+File Manager - Thunar 
+GUI Text eitor - Mousepad 
+CLI Text editor - Micro 
+Media player - mpv 
+Wallpaper manager - Waypaper (swww backend) 
 
 
 
