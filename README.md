@@ -12,7 +12,7 @@ Some configs are taken from others
 - Cursor theme - [Pautchouli](https://www.gnome-look.org/p/2077667)
 - GTK/QT Font - Ubuntu
 - Terminal Font - Ubuntu Mono
-- Bar Font - JetBrainsMono
+- Bar Font - JetBrains Mono
 
 # Apps 
 
