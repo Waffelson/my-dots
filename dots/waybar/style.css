@@ -1,0 +1,51 @@
+*{
+    font-family: JetBrainsMono;
+    font-size: 20px;
+    min-height: 0;
+    color: white;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#workspaces{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#workspaces button{
+    border-radius: 0px;
+    margin-right: 0px;
+    padding: 1px 0px;
+    font-weight: bolder;
+    
+}
+
+#workspaces button.active, #workspaces button.focused{
+    padding: 0 0px;
+
+    background: #7C9D96;
+}
+
+#tray,
+#mpd,
+#custom-weather,
+#cpu, 
+#temperature, 
+#memory,
+#sway-mode,
+#backlight, 
+#pulseaudio, 
+#custom-vpn,
+#disk,
+#custom-recorder,
+#custom-audiorec,
+#battery, 
+#clock, 
+#network {
+	padding: 0 10px;
+}
+
